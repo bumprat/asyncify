@@ -1,1 +1,0 @@
-"\code\programs\node\node.exe" %*
