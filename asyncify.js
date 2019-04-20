@@ -25,7 +25,9 @@ function asyncify (fn, awaitFor) {
       while (sf.fnPos < 0) {
         sf = sf.parent
       }
-      asyncPos.push(sf.fnPos)
+      if (asyncPos.indexOf(sf.fnPos) <0) {
+        asyncPos.push(sf.fnPos)
+      }
     }
   })
   awaitPos.forEach((pos) => {
